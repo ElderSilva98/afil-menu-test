@@ -1,0 +1,1 @@
+audio_sound_gain(menu_music,global.volume,0)
