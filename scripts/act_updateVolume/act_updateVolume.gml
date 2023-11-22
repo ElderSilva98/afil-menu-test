@@ -2,6 +2,6 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para obter mais informações
 function act_updateVolume(){
 	
-	global.volume = amount;
+	global.volume = current_value;
 
 }

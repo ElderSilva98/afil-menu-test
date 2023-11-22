@@ -3,11 +3,11 @@
 function act_fullscreen(){
 	
 	if(window_get_fullscreen()){
-		window_set_fullscreen(false)
-		text = "Desativado"
+		global.fullscreen = false;
+		text = "Desativado";
 	}else{
-		window_set_fullscreen(true)
-		text = "Ativado"
+		global.fullscreen = true;
+		text = "Ativado";
 	}
 
 }

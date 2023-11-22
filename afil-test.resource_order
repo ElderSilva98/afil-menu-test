@@ -31,7 +31,6 @@
     {"name":"ft_menu_21","order":2,"path":"fonts/ft_menu_21/ft_menu_21.yy",},
     {"name":"create_menu","order":3,"path":"scripts/create_menu/create_menu.yy",},
     {"name":"get_inputs","order":2,"path":"scripts/get_inputs/get_inputs.yy",},
-    {"name":"obj_menu","order":4,"path":"objects/obj_menu/obj_menu.yy",},
     {"name":"rm_settings","order":2,"path":"rooms/rm_settings/rm_settings.yy",},
     {"name":"act_fullscreen","order":5,"path":"scripts/act_fullscreen/act_fullscreen.yy",},
     {"name":"obj_menuManager","order":1,"path":"objects/obj_menuManager/obj_menuManager.yy",},

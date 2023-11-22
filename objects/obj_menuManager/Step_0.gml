@@ -8,25 +8,24 @@ if(!instance_exists(obj_bt)){
 }
 
 // Seleciona os elementos utilizando o teclado
-if(array_length(menu) > 0){
+if(array_length(menu.list) > 0){
 	if(up){
-		menu[selection].selected = false;
+		menu.list[selection].selected = false;
 		selection--;
 	}else if(down){
-		menu[selection].selected = false;
+		menu.list[selection].selected = false;
 		selection++;
 	}
 }
 
 // Limita a seleção pelo range do array
-if(selection >= array_length(menu)){
+if(selection >= array_length(menu.list)){
 	selection = 0;
 }else if(selection < 0){
-	selection = array_length(menu)-1
+	selection = array_length(menu.list)-1
 }
 
 // Diz para o elemento da UI que ele está sendo selecionado
-if (selection >= 0 && selection < array_length(menu)) {
-    menu[selection].selected = true;
+if (selection >= 0 && selection < array_length(menu.list)) {
+    menu.list[selection].selected = true;
 }
-

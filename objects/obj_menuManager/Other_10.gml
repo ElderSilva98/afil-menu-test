@@ -2,24 +2,36 @@
 switch(room){
 
 	case rm_menu:
-		var _play = create_button(555,162,spr_bt,"JOGAR",act_gotoGameplay)
-		var _settings= create_button(555,162+128,spr_bt,"CONFIGURAÇÕES",act_gotoSettings)
-		var _quit = create_button(555,162+255,spr_bt,"SAIR",act_quit)
-		menu = [_play,_settings,_quit]
+		menu = new create_menu(555,162)
+		// Botão Jogar
+		menu.addButton(spr_bt,"JOGAR",act_gotoGameplay);
+		// Botão Configurações
+		menu.addButton(spr_bt,"CONFIGURAÇÕES",act_gotoSettings);
+		// Botão Sair
+		menu.addButton(spr_bt,"SAIR",act_quit);
 		break;
 	
 	case rm_gameplay:
-		var _gp_back = create_button(555,162,spr_bt,"VOLTAR",act_gotoMenu)
-		menu = [_gp_back]
+		menu = new create_menu(555,162)
+		// Botão Voltar
+		menu.addButton(spr_bt,"VOLTAR",act_gotoMenu);
+		
 		break;
 		
 	case rm_settings:
-		var _fs = create_button(555,162,spr_bt,"Ativado",act_fullscreen)
-		_fs.title = "TELA CHEIA"
-		_fs.title_position = "up"
-		var _volume = create_slider("VOLUME",555+32,162+160,act_updateVolume)
-		var _st_back = create_button(555,162+255,spr_bt,"VOLTAR",act_gotoMenu)
-		menu = [_fs,_volume,_st_back]
+		menu = new create_menu(555,162)
+		// Botão Tela Cheia
+		var _fs = menu.addButton(spr_bt,"",act_fullscreen);
+		_fs.text = (global.fullscreen) ? "Ativado" : "Desativado"; // Verifica o estado da janela
+		_fs.title = "TELA CHEIA"; // Título do botão
+		_fs.title_position = "up"; // Posição do titulo em relação ao botão
+		// Slider de Volume
+		var _vol = menu.addSlider("VOLUME",act_updateVolume);
+		_vol.x += 32 // Ajuste da posição horizontal
+		_vol.current_value =  global.volume // Ajusta do volume atual
+		// Botão Voltar
+		menu.addButton(spr_bt,"VOLTAR",act_gotoMenu);
+		
 		break;
 
 }
