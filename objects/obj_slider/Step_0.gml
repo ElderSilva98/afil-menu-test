@@ -36,11 +36,11 @@ if(selected || dragging){
 
 //Aumenta ou diminui quando selecionado pelo teclado
 get_inputs();
-if(selected && right){
+if(selected && right_hold){
 	var new_value = current_value+1;
     current_value = clamp(new_value, min_value,max_value);
 	script_execute(update_value);
-}else if(selected && left){
+}else if(selected && left_hold){
 	var new_value = current_value-1;
     current_value = clamp(new_value, min_value,max_value);
 	script_execute(update_value);

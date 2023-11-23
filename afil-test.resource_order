@@ -20,6 +20,7 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"create_popup","order":4,"path":"scripts/create_popup/create_popup.yy",},
     {"name":"act_quit","order":4,"path":"scripts/act_quit/act_quit.yy",},
     {"name":"obj_slider","order":1,"path":"objects/obj_slider/obj_slider.yy",},
     {"name":"get_hover","order":1,"path":"scripts/get_hover/get_hover.yy",},
@@ -28,7 +29,10 @@
     {"name":"create_slider","order":2,"path":"scripts/create_slider/create_slider.yy",},
     {"name":"rm_gameplay","order":1,"path":"rooms/rm_gameplay/rm_gameplay.yy",},
     {"name":"ft_menu_16","order":1,"path":"fonts/ft_menu_16/ft_menu_16.yy",},
+    {"name":"obj_popup","order":2,"path":"objects/obj_popup/obj_popup.yy",},
+    {"name":"act_closePopup","order":8,"path":"scripts/act_closePopup/act_closePopup.yy",},
     {"name":"ft_menu_21","order":2,"path":"fonts/ft_menu_21/ft_menu_21.yy",},
+    {"name":"act_gameEnd","order":7,"path":"scripts/act_gameEnd/act_gameEnd.yy",},
     {"name":"create_menu","order":3,"path":"scripts/create_menu/create_menu.yy",},
     {"name":"get_inputs","order":2,"path":"scripts/get_inputs/get_inputs.yy",},
     {"name":"rm_settings","order":2,"path":"rooms/rm_settings/rm_settings.yy",},

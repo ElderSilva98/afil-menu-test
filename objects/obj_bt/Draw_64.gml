@@ -1,4 +1,4 @@
-draw_self();
+ draw_self();
 //Verifica se está selecionado e destaca em amarelo
 var _color = merge_color(c_white, c_yellow, hover)
 draw_set_color(_color)

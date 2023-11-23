@@ -1,11 +1,10 @@
 // Os recursos de script mudaram para a v2.3.0; veja
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 para obter mais informações
-function create_menu(_x,_y,_sprite = noone, _title = "", _priority = 0) constructor{
+function create_menu(_x,_y,_title = "", _priority = 0) constructor{
 
 x = _x
 y = _y
 list = [];
-sprite = _sprite;
 title = _title;
 priority = _priority;
 
