@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "act_gotoMenu",
+  "name": "act_settingsDisplay",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

@@ -35,11 +35,10 @@
     {"name":"act_gameEnd","order":7,"path":"scripts/act_gameEnd/act_gameEnd.yy",},
     {"name":"create_menu","order":3,"path":"scripts/create_menu/create_menu.yy",},
     {"name":"get_inputs","order":2,"path":"scripts/get_inputs/get_inputs.yy",},
-    {"name":"rm_settings","order":2,"path":"rooms/rm_settings/rm_settings.yy",},
     {"name":"act_fullscreen","order":5,"path":"scripts/act_fullscreen/act_fullscreen.yy",},
     {"name":"obj_menuManager","order":1,"path":"objects/obj_menuManager/obj_menuManager.yy",},
-    {"name":"act_gotoMenu","order":3,"path":"scripts/act_gotoMenu/act_gotoMenu.yy",},
+    {"name":"obj_inputManager","order":4,"path":"objects/obj_inputManager/obj_inputManager.yy",},
     {"name":"act_updateVolume","order":6,"path":"scripts/act_updateVolume/act_updateVolume.yy",},
-    {"name":"act_gotoSettings","order":2,"path":"scripts/act_gotoSettings/act_gotoSettings.yy",},
+    {"name":"act_settingsDisplay","order":2,"path":"scripts/act_settingsDisplay/act_settingsDisplay.yy",},
   ],
 }

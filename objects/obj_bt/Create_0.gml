@@ -9,3 +9,4 @@ title = "";
 title_position = "up"; //"up","down","left","right"
 action = 0;
 selected = false;
+active = true;

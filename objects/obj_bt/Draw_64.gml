@@ -1,4 +1,6 @@
- draw_self();
+if(active){
+
+draw_self();
 //Verifica se está selecionado e destaca em amarelo
 var _color = merge_color(c_white, c_yellow, hover)
 draw_set_color(_color)
@@ -40,3 +42,5 @@ if(string_length(title) > 0){
 draw_set_color(c_white)
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
+
+}

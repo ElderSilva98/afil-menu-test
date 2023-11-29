@@ -1,59 +1,54 @@
 // Obtem os inputs do teclado
-get_inputs();
+var _up = obj_inputManager.up
+var _down = obj_inputManager.down
+var _left = obj_inputManager.left
+var _right = obj_inputManager.right
+var _actualMenu = noone;
 
-if(!instance_exists(obj_popup)){
-	// Verifica se os elmentos ja foram colocados na cena
-	if(!instance_exists(obj_bt)){
-		event_user(0)
-		selection = 0;
-	}
-
-	// Seleciona os elementos utilizando o teclado
-	if(array_length(menu.list) > 0){
-		if(up){
-			menu.list[selection].selected = false;
-			selection--;
-		}else if(down){
-			menu.list[selection].selected = false;
-			selection++;
+switch(room){
+	case rm_menu:
+		_actualMenu = MMpages[activeMenu]; break;
+	
+	case rm_gameplay:
+		if(gp_menu == noone){
+			gp_menu = new create_menu(555,162,true)
+			gp_menu.addButton(spr_bt,"VOLTAR",game_restart)
 		}
-	}
+		_actualMenu = gp_menu; break;
+}
 
+// Seleciona os elementos utilizando o teclado
+if(_actualMenu != noone && !instance_exists(obj_popup)){
+	if(_up){
+		_actualMenu.list[selection].selected = false;
+		selection--;
+	}else if(_down){
+		_actualMenu.list[selection].selected = false;
+		selection++;
+	}
+	
 	// Limita a seleção pelo range do array
-	if(selection >= array_length(menu.list)){
-		selection = 0;
-	}else if(selection < 0){
-		selection = array_length(menu.list)-1
-	}
-
+	if(selection >= array_length(_actualMenu.list)) selection = 0;
+	if(selection < 0)	selection = array_length(_actualMenu.list)-1
+	
 	// Diz para o elemento da UI que ele está sendo selecionado
-	if (selection >= 0 && selection < array_length(menu.list)) {
-	    menu.list[selection].selected = true;
-	}
+	_actualMenu.list[selection].selected = true;
 
 }else{
 	
-	// Seleciona as opçoes do Pop up
-	if(array_length(obj_popup.options) > 0){
-		if(left){
-			obj_popup.options[selection].selected = false;
-			selection--;
-		}else if(right){
-			obj_popup.options[selection].selected = false;
-			selection++;
-		}
+	if(_left){
+		obj_popup.options[selection].selected = false;
+		selection--;
+	}else if(_right){
+		obj_popup.options[selection].selected = false;
+		selection++;
 	}
-
+	
 	// Limita a seleção pelo range do array
-	if(selection >= array_length(obj_popup.options)){
-		selection = 0;
-	}else if(selection < 0){
-		selection = array_length(obj_popup.options)-1
-	}
-
-	// Diz para o botão do popup que ele está sendo selecionado
-	if (selection >= 0 && selection < array_length(obj_popup.options)) {
-	    obj_popup.options[selection].selected = true;
-	}
+	if(selection >= array_length(obj_popup.options)) selection = 0;
+	if(selection < 0)	selection = array_length(obj_popup.options)-1
+	
+	// Diz para o elemento da UI que ele está sendo selecionado
+	obj_popup.options[selection].selected = true;
 
 }

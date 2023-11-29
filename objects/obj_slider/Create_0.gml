@@ -10,3 +10,4 @@ height = 5;
 dragging = false;
 selected = false;
 hover = 0;
+active = true;
